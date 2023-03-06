@@ -1,0 +1,27 @@
+syntax="proto3";
+
+package score;
+
+option go_package = "./";
+
+service ScoreService {
+    rpc ListMatches(ListMatchesRequest) returns(ListMatchesResponse);
+}
+
+message ListMatchesRequest {
+    string country = 1;
+}
+
+message obectA {
+    string score = 1;
+    bool live = 2;
+}
+
+message ListMatchesResponse {
+    repeated obectA scores = 1;
+}
+
+// scores {
+//     obectA,
+//     obectA
+// }
