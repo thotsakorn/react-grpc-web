@@ -1,0 +1,3 @@
+brew install protoc-gen-grpc-web       
+
+protoc -I=. src/score.proto --js_out=import_style=commonjs:. --grpc-web_out=import_style=commonjs,mode=grpcwebtext:.
